@@ -1,20 +1,42 @@
-import "./Colaborador.css"
-import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from "react-icons/ai"
+import "./Colaborador.css";
+import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import IColaborador from "../../compartilhado/interfaces/IColaborador";
+
+
+interface IColaboradorProps {
+    colaborador: IColaborador;
+    corCabecalho: string;
+    aoExcluirColaborador: (timeId: string) => void;
+    aoFavoritarColaborador: (timeId: string) => void;
+}
+
 
 export const Colaborador = ({
     colaborador,
     corCabecalho,
     aoExcluirColaborador,
     aoFavoritarColaborador
-}) => {
+}: IColaboradorProps) => {
 
     const cssCabecalho = { backgroundColor: corCabecalho }
+
+
+    function ExecutarAoExcluirColaborador() {
+        if (aoExcluirColaborador)
+            aoExcluirColaborador(colaborador.id)
+    }
+
+
+    function ExecutarAoFavoritarColaborador() {
+        if (aoFavoritarColaborador)
+            aoFavoritarColaborador(colaborador.id)
+    }
 
 
     return (
         <div className="colaborador">
             <AiFillCloseCircle className="deletar"
-                onClick={() => aoExcluirColaborador(colaborador.id)}
+                onClick={() => ExecutarAoExcluirColaborador()}
                 size={24}
             />
             <div className="cabecalho" style={cssCabecalho} >
@@ -25,11 +47,11 @@ export const Colaborador = ({
                 <h5>{colaborador.cargo}</h5>
                 <div className="favorito">
                     {colaborador.favorito
-                        ? <AiFillHeart onClick={() => aoFavoritarColaborador(colaborador.id)}
+                        ? <AiFillHeart onClick={() => ExecutarAoFavoritarColaborador()}
                             size={24}
                             color="ff0000"
                         />
-                        : <AiOutlineHeart onClick={() => aoFavoritarColaborador(colaborador.id)}
+                        : <AiOutlineHeart onClick={() => ExecutarAoFavoritarColaborador()}
                             size={24}
                             color="ff0000"
                         />
@@ -39,3 +61,4 @@ export const Colaborador = ({
         </div>
     )
 }
+export default Colaborador;

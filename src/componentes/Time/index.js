@@ -1,3 +1,4 @@
-import { Time } from "./Time"
+import { Time } from "./Time";
+
 
 export default Time

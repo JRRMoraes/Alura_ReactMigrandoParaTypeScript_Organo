@@ -1,10 +1,10 @@
 # Bom dia, boa tarde e boa noite.
 ## Por João Ricardo R. de Moraes.
 
-Projeto final do curso da Alura "React: desenvolvendo com JavaScript"  ([https://cursos.alura.com.br/course/react-desenvolvendo-javascript]).
+Projeto final do curso da Alura "React: Migrando para TypeScript"  ([https://cursos.alura.com.br/course/react-migrando-typescript]).
 
-Disponível como aplicativo na Vercel em [https://alura-react-desenvolvendo-com-java-script-organo.vercel.app/]
-ou como código-fonte no GitHub em [https://github.com/JRRMoraes/Alura_ReactDesenvolvendoComJavaScript_Organo]
+Disponível como aplicativo na Vercel em [https://.vercel.app/]
+ou como código-fonte no GitHub em [https://github.com/JRRMoraes/Alura_ReactMigrandoParaTypeScript_Organo]
 
 
 Contato no LinkedIn com João Moraes por [https://www.linkedin.com/in/jo%C3%A3o-moraes-b612a974]

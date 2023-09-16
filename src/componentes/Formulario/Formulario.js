@@ -1,9 +1,10 @@
-import "./Formulario.css"
+import "./Formulario.css";
 import { useState } from 'react';
 import CampoTexto from "../CampoTexto";
 import ListaSuspensa from "../ListaSuspensa";
 import Botao from "../Botao";
 import CampoCor from "../CampoCor";
+
 
 export const Formulario = (props) => {
 
