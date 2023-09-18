@@ -1,9 +1,9 @@
-import "./Banner.css";
+import "./Banner.css"
 
 
 interface BannerProps {
-    enderecoImagem: string;
-    textoAlternativo?: string;
+    enderecoImagem: string
+    textoAlternativo?: string
 }
 
 
@@ -19,4 +19,4 @@ export const Banner = ({
         </header>
     )
 }
-export default Banner;
+export default Banner

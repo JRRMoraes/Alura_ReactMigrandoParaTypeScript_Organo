@@ -1,5 +1,6 @@
 import "./Rodape.css"
 
+
 export const Rodape = () => {
 
     return (
@@ -32,3 +33,4 @@ export const Rodape = () => {
         </footer>
     )
 }
+export default Rodape 

@@ -1,5 +1,5 @@
-import { Colaborador } from "./Colaborador";
+import { Colaborador } from "./Colaborador"
 
 
-export default Colaborador;
-export * from "./Colaborador";
+export default Colaborador
+export * from "./Colaborador"

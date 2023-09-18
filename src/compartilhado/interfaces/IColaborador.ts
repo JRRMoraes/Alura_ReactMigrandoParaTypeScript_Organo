@@ -1,8 +1,13 @@
+import ITime from "./ITime"
+
+
 export interface IColaborador {
-    id: string,
-    nome: string,
-    cargo: string,
-    imagem: string,
-    favorito: boolean
+    idColaborador: string
+    nome: string
+    cargo: string
+    imagem: string
+    data: string
+    favorito?: boolean
+    time?: ITime
 }
-export default IColaborador;
+export default IColaborador

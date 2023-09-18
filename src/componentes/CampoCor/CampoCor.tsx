@@ -1,26 +1,24 @@
-import "./CampoTexto.css"
+import "./CampoCor.css"
 
 
-interface CampoTextoProps {
+interface ICampoCorProps {
     label: string
     valor: string
     placeholder: string
     aoAlterado: (valor: string) => void
-    tipo?: "text" | "password" | "date" | "email" | "number"
     obrigatorio?: boolean
 }
 
 
-export const CampoTexto = ({
+export const CampoCor = ({
     label,
     valor,
     placeholder,
     aoAlterado,
-    tipo = "text",
     obrigatorio = false
-}: CampoTextoProps) => {
+}: ICampoCorProps) => {
 
-    const placeholderModificada = `${placeholder}...`
+    const placeholderModificada = `${placeholder} ...`
 
 
     const aoDigitar = (evento: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,17 +28,15 @@ export const CampoTexto = ({
 
 
     return (
-        <div className="campo-texto">
-            <label>
-                {label}
-            </label>
-            <input value={valor}
+        <div className="campo-cor">
+            <label>{label}</label>
+            <input type="color"
+                value={valor}
                 onChange={aoDigitar}
-                type={tipo}
                 placeholder={placeholderModificada}
                 required={obrigatorio}
             />
         </div>
     )
 }
-export default CampoTexto
+export default CampoCor

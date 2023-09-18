@@ -1,13 +1,13 @@
-import "./Colaborador.css";
-import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import IColaborador from "../../compartilhado/interfaces/IColaborador";
+import "./Colaborador.css"
+import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from "react-icons/ai"
+import IColaborador from "../../compartilhado/interfaces/IColaborador"
 
 
 interface IColaboradorProps {
-    colaborador: IColaborador;
-    corCabecalho: string;
-    aoExcluirColaborador: (timeId: string) => void;
-    aoFavoritarColaborador: (timeId: string) => void;
+    colaborador: IColaborador
+    corCabecalho: string
+    aoExcluirColaborador: (colaborador: IColaborador) => void
+    aoFavoritarColaborador: (colaborador: IColaborador) => void
 }
 
 
@@ -23,13 +23,13 @@ export const Colaborador = ({
 
     function ExecutarAoExcluirColaborador() {
         if (aoExcluirColaborador)
-            aoExcluirColaborador(colaborador.id)
+            aoExcluirColaborador(colaborador)
     }
 
 
     function ExecutarAoFavoritarColaborador() {
         if (aoFavoritarColaborador)
-            aoFavoritarColaborador(colaborador.id)
+            aoFavoritarColaborador(colaborador)
     }
 
 
@@ -45,6 +45,7 @@ export const Colaborador = ({
             <div className="rodape">
                 <h4>{colaborador.nome}</h4>
                 <h5>{colaborador.cargo}</h5>
+                <p>{new Date(colaborador.data).toLocaleDateString()}</p>
                 <div className="favorito">
                     {colaborador.favorito
                         ? <AiFillHeart onClick={() => ExecutarAoFavoritarColaborador()}
@@ -61,4 +62,4 @@ export const Colaborador = ({
         </div>
     )
 }
-export default Colaborador;
+export default Colaborador

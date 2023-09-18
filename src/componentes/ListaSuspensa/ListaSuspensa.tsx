@@ -1,12 +1,12 @@
-import "./ListaSuspensa.css";
+import "./ListaSuspensa.css"
 
 
 interface IListaSuspensaProps {
-    label: string;
-    valor: string;
-    aoAlterado: (valor: string) => void;
-    obrigatorio?: boolean;
-    itens: string[];
+    label: string
+    valor: string
+    aoAlterado: (valor: string) => void
+    obrigatorio?: boolean
+    itens: string[]
 }
 
 
@@ -20,7 +20,7 @@ export const ListaSuspensa = ({
 
     function AoAlterar(evento: React.ChangeEvent<HTMLSelectElement>) {
         if (aoAlterado)
-            aoAlterado(evento.target.value);
+            aoAlterado(evento.target.value)
     }
 
 
@@ -39,4 +39,4 @@ export const ListaSuspensa = ({
         </div>
     )
 }
-export default ListaSuspensa;
+export default ListaSuspensa

@@ -1,16 +1,16 @@
-import "./Time.css";
-import Colaborador from "../Colaborador";
-import hexToRgba from 'hex-to-rgba';
-import ITime from "../../compartilhado/interfaces/ITime";
-import IColaborador from "../../compartilhado/interfaces/IColaborador";
+import "./Time.css"
+import Colaborador from "../Colaborador"
+import hexToRgba from 'hex-to-rgba'
+import ITime from "../../compartilhado/interfaces/ITime"
+import IColaborador from "../../compartilhado/interfaces/IColaborador"
 
 
 interface TimeProps {
-    time: ITime;
-    colaboradores: IColaborador[];
-    aoExcluirColaborador: (timeId: string) => void;
-    aoAlterarCorDoTime: (valor: string, timeId: string) => void;
-    aoFavoritarColaborador: (timeId: string) => void;
+    time: ITime
+    colaboradores: IColaborador[]
+    aoExcluirColaborador: (colaborador: IColaborador) => void
+    aoAlterarCorDoTime: (time: ITime, cor: string) => void
+    aoFavoritarColaborador: (colaborador: IColaborador) => void
 }
 
 
@@ -30,7 +30,7 @@ export const Time = ({
 
     function ExecutarAoAlterarCorDoTime(evento: React.ChangeEvent<HTMLInputElement>) {
         if (aoAlterarCorDoTime)
-            aoAlterarCorDoTime(evento.target.value, time.id)
+            aoAlterarCorDoTime(time, evento.target.value)
     }
 
     return (
@@ -54,3 +54,4 @@ export const Time = ({
         </section>
     )
 }
+export default Time 
