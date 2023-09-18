@@ -3,7 +3,7 @@
 
 Projeto final do curso da Alura "React: Migrando para TypeScript"  ([https://cursos.alura.com.br/course/react-migrando-typescript]).
 
-Disponível como aplicativo na Vercel em [https://.vercel.app/]
+Disponível como aplicativo na Vercel em [https://alura-react-migrando-para-type-script-organo.vercel.app/]
 ou como código-fonte no GitHub em [https://github.com/JRRMoraes/Alura_ReactMigrandoParaTypeScript_Organo]
 
 
